@@ -5,10 +5,12 @@ const express = require('express');
 const app = express();
 
 const studentsController = require('./controllers/studentsController');
+const namesController = require('./controllers/namesController');
 
 //we are going to tell app, hey whatever you get from students path, 
 //use the students controller
 app.use('/students', studentsController);
+app.use('/names',namesController);
 
 //route
 app.get('/', (req, res)=>{
