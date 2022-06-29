@@ -1,5 +1,6 @@
 //import code for express
 const express = require('express');
+const cors = require('cors');
 
 //initialize app
 const app = express();
@@ -9,6 +10,7 @@ const namesController = require('./controllers/namesController');
 
 //we are going to tell app, hey whatever you get from students path, 
 //use the students controller
+app.use(cors());
 app.use('/students', studentsController);
 app.use('/names',namesController);
 
