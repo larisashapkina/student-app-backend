@@ -1,10 +1,10 @@
 const express = require('express');
 const controller = express.Router();
 
-const studentData = require('../studentData.json');
+// const studentData = require('../studentData.json');
 
 const db = require('../db/index');
-const { response } = require('express');
+// const { response } = require('express');
 
 controller.get('/', async (request, response) => {
 
